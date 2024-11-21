@@ -24,15 +24,17 @@ export const topNav: Navigation = {
   items: [
     {
       title: 'Projects',
-      href: '/our-work',
+      href: '/content/our-work',
     },
     {
       title: 'Media',
-      href: '/media',
+      href: '/content/media',
     },
-    {
-      title: 'Jobs',
-      href: '/jobs',
-    },
+
+    // I dont know what is the purpose of this
+    // {
+    //   title: 'Jobs',
+    //   href: '/content/jobs',
+    // },
   ],
 }

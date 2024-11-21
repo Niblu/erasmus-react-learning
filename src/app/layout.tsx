@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const cal = localFont({
@@ -12,7 +13,7 @@ const cal = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Next barebones app',
+  title: 'Portfolio with articles',
   description: 'rSQ template',
 }
 
@@ -22,17 +23,25 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          inter.variable,
-          cal.variable
-        )}
+      className={cn(
+        'mt-20 min-h-screen bg-background font-sans antialiased',
+        inter.variable,
+        cal.variable
+      )}
       >
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+         > 
         {children}
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>
   )
 }
+

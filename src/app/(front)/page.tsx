@@ -1,30 +1,52 @@
-import Link from "next/link"
-
-
+import TextLayout from '@/components/anims/TextLayout'
 
 const Page: React.FC = () => {
-
-  
-
-
   return (
     <>
-    <div className="ml-10 mt-24 h-full flex justify-center w-full flex-col">
-  <h1>Armandas Latanauskas</h1><br></br>
-    <p className="w-5/12 ml-16">I'm a frontend developer, motivated, optimist programmer. I'm currently unemployed, and looking to learn more about programming and discover new things </p>
-    {/* Content to blogs */}
-    <h1 className="font-semibold text-2xl mr-4 relative mt-4">My Portfolio</h1>
-      <ul className="ml-32 mt-10 g">
-        {/* Placeholder */}
-        <Link href="/page/dx"><li>On developer experience</li></Link>
-        <Link href="/page/dm"><li>On Developer Marketing</li></Link>
-        <Link href="/page/dr"><li>On Developer Relations</li></Link>
-        <Link href="/page/dp"><li>On Developer Products</li></Link>
-        <Link href="/page/cm"><li>On Community Moderation</li></Link>
-        <Link href="/page/risej"><li>Rust is Eating JavaScript</li></Link>
+      {/* Main text */}
+      <div className='mb-20 mt-20'>
+        <h1 className='text-wrap text-center text-5xl font-medium [text-shadow:_1px_2px_3px_rgba(0,0,0,0.2);]'>
+          <span className='text-7xl text-emerald-500'>Hello</span>{' '}
+          <span className='text-3xl'>To my</span>
+          <span className='text-7xl text-emerald-500'>World</span>
+        </h1>
+      </div>
+      {/* Line */}
+      <div className='m-auto flex bg-gray-400 w-4/12 justify-center [height:_0.4px]'></div>
+      <div className='m-auto mt-4 flex w-10/12 justify-center'>
+        <TextLayout></TextLayout>
+      </div>
+      <h1 className='mb-4 ml-12 mt-24 text-4xl font-bold'>Media</h1>
+      <div className='mb-24 ml-12 flex w-56 justify-center bg-gray-400 [height:_0.4px]'></div>
+      {/* Container for blog post */}
+      <div className='m-auto p-9 grid h-full w-full grid-cols-5 gap-4'>
+        {/* Placeholder blog post  */}        
+          <div className='text-break w-[200px] h-[200px] font-bold text-xl'>
+            <img src='https://placehold.co/1920x728'></img>
+            <h1 className='p-2'>Placeholder Placeholder Placeholder Placeholder</h1>
+          </div>
+          <div className='text-break w-[200px] h-[200px] font-bold text-xl'>
+            <img src='https://placehold.co/1920x728'></img>
+            <h1 className='p-2'>Placeholder Placeholder Placeholder Placeholder</h1>
+          </div>
+          <div className='text-break w-[200px] h-[200px] font-bold text-xl'>
+            <img src='https://placehold.co/1920x728'></img>
+            <h1 className='p-2'>Placeholder Placeholder Placeholder Placeholder</h1>
+          </div>
+          <div className='text-break w-[200px] h-[200px] font-bold text-xl'>
+            <img src='https://placehold.co/1920x728'></img>
+            <h1 className='p-2'>Placeholder Placeholder Placeholder Placeholder</h1>
+          </div>
+          <div className='text-break w-[200px] h-[200px] font-bold text-xl'>
+            <img src='https://placehold.co/1920x728'></img>
+            <h1 className='p-2'>Placeholder Placeholder Placeholder Placeholder</h1>
+          </div>
+          <div className='text-break w-[200px] h-[200px] font-bold text-xl'>
+            <img src='https://placehold.co/1920x728'></img>
+            <h1 className='p-2'>Placeholder Placeholder Placeholder Placeholder</h1>
+          </div>
 
-      </ul>
-    </div>
+      </div>
     </>
   )
 }
